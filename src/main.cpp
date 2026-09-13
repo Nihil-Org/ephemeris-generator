@@ -1,4 +1,5 @@
 #include "cli/CLI.cpp"
+#include "devices/UbxDevice.cpp"
 
 #include <stdint.h>
 #include <atomic>
