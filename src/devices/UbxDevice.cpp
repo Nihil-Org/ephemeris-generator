@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <termios.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 namespace
 {
@@ -97,6 +98,11 @@ public:
         }
 
         tcflush(file_descriptor, TCIOFLUSH);
+    }
+
+    ~UbxDevice()
+    {
+        close_file_descriptor();
     }
 
     void close_file_descriptor()
